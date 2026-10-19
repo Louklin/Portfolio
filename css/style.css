@@ -89,9 +89,10 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   padding-inline: 20px;
 }
 
-.section { padding-block: 88px; }
+.section { padding-block: 60px; }
 
-.section-heading { max-width: 640px; margin-bottom: 44px; }
+.section-heading { margin-bottom: 28px; }
+h2.eyebrow { font-size: 0.95rem; margin-bottom: 0; }
 
 .eyebrow {
   display: inline-flex;
@@ -290,26 +291,10 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .hero-inner {
   position: relative;
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1fr auto;
   align-items: center;
-  gap: 48px;
+  gap: 64px;
   padding-block: 48px;
-}
-.hero-status {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--text-2);
-  margin-bottom: 20px;
-}
-.status-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--success);
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--success) 25%, transparent);
 }
 .hero-title {
   font-size: clamp(2.6rem, 1.8rem + 3.4vw, 4.75rem);
@@ -330,56 +315,38 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px; }
 
-/* Hero visual: skill badges floating around a center icon */
-.hero-visual { display: flex; justify-content: center; }
-.orbit { position: relative; width: 340px; height: 340px; }
-.orbit::before {
-  content: "";
-  position: absolute;
-  inset: 40px;
+/* Hero photo (placeholder until a photo is added) */
+.hero-photo { display: flex; justify-content: center; }
+.hero-photo img,
+.photo-placeholder {
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
-  border: 1px dashed var(--border-strong);
+  object-fit: cover;
+  border: 6px solid #fff;
+  box-shadow: 0 20px 50px -20px rgba(30, 99, 214, 0.45);
 }
-.orbit-core {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 120px;
-  height: 120px;
-  margin: -60px 0 0 -60px;
-  border-radius: 50%;
+.photo-placeholder {
   display: grid;
-  place-items: center;
-  font-size: 2.4rem;
+  place-content: center;
+  justify-items: center;
+  gap: 10px;
+  background: linear-gradient(160deg, #eaf4ff, #d3e7fb);
   color: var(--accent);
-  box-shadow: 0 0 40px -6px rgba(79, 140, 255, 0.45);
-}
-.orbit-badge {
-  position: absolute;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  border-radius: 999px;
-  font-size: 0.82rem;
   font-weight: 600;
-  white-space: nowrap;
-  animation: float 6s ease-in-out infinite;
+  font-size: 0.95rem;
+  outline: 2px dashed var(--border-strong);
+  outline-offset: -18px;
 }
-.orbit-badge i { color: var(--accent-3); }
-.b1 { top: 2%;  left: 14%; }
-.b2 { top: 16%; right: -4%; animation-delay: -2s; }
-.b3 { top: 50%; left: -14%; animation-delay: -4s; }
-.b4 { bottom: 10%; right: -8%; animation-delay: -1s; }
-.b5 { bottom: 0;  left: 18%; animation-delay: -3s; }
+.photo-placeholder i { font-size: 4rem; color: var(--accent-2); }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
+/* Experience & Education: cards side by side */
+.card-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  align-items: start;
 }
-
-/* Experience: cards stacked vertically */
-.timeline { display: grid; gap: 20px; }
 .timeline-card { padding: 28px; border-left: 4px solid var(--accent-2); }
 .timeline-head {
   display: flex;
@@ -493,11 +460,15 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
   .hero-inner,
   .contact-inner { grid-template-columns: 1fr; }
-  .hero-visual { display: none; }
+  .hero-photo { order: -1; justify-content: flex-start; }
+  .hero-photo img,
+  .photo-placeholder { width: 160px; height: 160px; border-width: 4px; outline-offset: -10px; }
+  .photo-placeholder i { font-size: 2.4rem; }
+  .card-row { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 600px) {
-  .section { padding-block: 64px; }
+  .section { padding-block: 44px; }
   .timeline-card,
   .skill-group,
   .project-card { padding: 22px; }
@@ -506,7 +477,6 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 /* Respect "reduce motion" settings */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .orbit-badge { animation: none; }
   .js .reveal { opacity: 1; transform: none; transition: none; }
   * { transition-duration: 0.01ms !important; }
 }

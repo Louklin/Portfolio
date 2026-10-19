@@ -51,6 +51,7 @@
         <nav class="nav-links" aria-label="Primary">
           <ul>
             <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
             <li><a href="#skills" class="nav-link">Skills</a></li>
             <li><a href="#projects" class="nav-link">Projects</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -74,6 +75,7 @@
       <div class="nav-mobile-menu" id="navMobileMenu">
         <ul>
           <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -88,10 +90,6 @@
 
         <div class="container hero-inner">
           <div class="hero-copy">
-            <p class="hero-status reveal">
-              <span class="status-dot"></span>
-              Open to internships
-            </p>
             <h1 class="hero-title reveal">Felice Louise Vicencio</h1>
             <p class="hero-role gradient-text reveal">Computer Science Student</p>
             <p class="hero-description reveal">
@@ -109,82 +107,81 @@
             </div>
           </div>
 
-          <div class="hero-visual reveal" aria-hidden="true">
-            <div class="orbit">
-              <div class="orbit-core glass"><i class="fa-solid fa-message"></i></div>
-              <span class="orbit-badge glass b1"><i class="fa-solid fa-brain"></i>BERT</span>
-              <span class="orbit-badge glass b2"><i class="fa-brands fa-python"></i>Python</span>
-              <span class="orbit-badge glass b3"><i class="fa-solid fa-broom"></i>Data cleaning</span>
-              <span class="orbit-badge glass b4"><i class="fa-solid fa-chart-column"></i>Visualization</span>
-              <span class="orbit-badge glass b5"><i class="fa-solid fa-pen-nib"></i>Writing</span>
+          <div class="hero-photo reveal">
+            <!-- PHOTO: save your photo as assets/photo.jpg (a square image works best),
+                 then replace the placeholder <div> below with:
+                 <img src="assets/photo.jpg" alt="Felice Louise Vicencio" /> -->
+            <div class="photo-placeholder" role="img" aria-label="Photo placeholder">
+              <i class="fa-solid fa-user" aria-hidden="true"></i>
+              <span>Your photo</span>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ============ EXPERIENCE & EDUCATION ============ -->
+      <!-- ============ EXPERIENCE ============ -->
       <section id="experience" class="section" aria-labelledby="experience-title">
         <div class="container">
           <div class="section-heading">
-            <p class="eyebrow reveal">Experience</p>
-            <h2 class="section-title reveal" id="experience-title">
-              Research, writing, and school
-            </h2>
+            <h2 class="eyebrow reveal" id="experience-title">Experience</h2>
           </div>
 
-          <div class="timeline">
-            <article class="timeline-entry reveal">
-              <div class="timeline-card glass">
-                <div class="timeline-head">
-                  <h3>A.S.E.A. Thesis Project</h3>
-                  <span class="timeline-date">2025 – 2026</span>
-                </div>
-                <p class="timeline-sub">Data Analyst</p>
-                <ul class="timeline-details">
-                  <li>Collected, cleaned, and preprocessed the SMS dataset for a BERT-based spam and phishing detector built for PNP Regional Anti-Cybercrime Unit 3.</li>
-                  <li>Worked on a revised training setup with class-weighted loss for imbalanced labels; compared multilingual and Filipino-specific models, with mBERT performing best.</li>
-                  <li>Co-writing a paper from the thesis for submission to the SOICT conference.</li>
-                </ul>
-                <div class="chips">
-                  <span class="chip">mBERT</span><span class="chip">Tagalog-RoBERTa</span><span class="chip">NLP</span><span class="chip">Data preprocessing</span>
-                </div>
+          <div class="card-row">
+            <article class="timeline-card glass reveal">
+              <div class="timeline-head">
+                <h3>A.S.E.A. Thesis Project</h3>
+                <span class="timeline-date">2025 – 2026</span>
+              </div>
+              <p class="timeline-sub">Data Analyst</p>
+              <ul class="timeline-details">
+                <li>Collected, cleaned, and preprocessed the SMS dataset for a BERT-based spam and phishing detector built for PNP Regional Anti-Cybercrime Unit 3.</li>
+                <li>Worked on a revised training setup with class-weighted loss for imbalanced labels; compared multilingual and Filipino-specific models, with mBERT performing best.</li>
+                <li>Co-writing a paper from the thesis for submission to the SOICT conference.</li>
+              </ul>
+              <div class="chips">
+                <span class="chip">mBERT</span><span class="chip">Tagalog-RoBERTa</span><span class="chip">NLP</span><span class="chip">Data preprocessing</span>
               </div>
             </article>
 
-            <article class="timeline-entry reveal">
-              <div class="timeline-card glass">
-                <div class="timeline-head">
-                  <h3>Data Link</h3>
-                  <!-- TODO: add the years you wrote for Data Link -->
-                </div>
-                <p class="timeline-sub">Writer, AUF's school paper</p>
-                <ul class="timeline-details">
-                  <li>Wrote editorials and feature articles for the university publication.</li>
-                </ul>
+            <article class="timeline-card glass reveal">
+              <div class="timeline-head">
+                <h3>Data Link</h3>
+                <!-- TODO: add the years you wrote for Data Link -->
               </div>
+              <p class="timeline-sub">Writer, AUF's school paper</p>
+              <ul class="timeline-details">
+                <li>Wrote editorials and feature articles for the university publication.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ EDUCATION ============ -->
+      <section id="education" class="section" aria-labelledby="education-title">
+        <div class="container">
+          <div class="section-heading">
+            <h2 class="eyebrow reveal" id="education-title">Education</h2>
+          </div>
+
+          <div class="card-row">
+            <article class="timeline-card glass reveal">
+              <div class="timeline-head">
+                <h3>BS Computer Science</h3>
+                <span class="timeline-date">Expected 2027</span>
+              </div>
+              <p class="timeline-sub">Angeles University Foundation</p>
             </article>
 
-            <article class="timeline-entry reveal">
-              <div class="timeline-card glass">
-                <div class="timeline-head">
-                  <h3>BS Computer Science</h3>
-                  <span class="timeline-date">Expected 2027</span>
-                </div>
-                <p class="timeline-sub">Angeles University Foundation</p>
+            <article class="timeline-card glass reveal">
+              <div class="timeline-head">
+                <h3>Senior High School, STEM strand</h3>
+                <span class="timeline-date">2021 – 2023</span>
               </div>
-            </article>
-
-            <article class="timeline-entry reveal">
-              <div class="timeline-card glass">
-                <div class="timeline-head">
-                  <h3>Senior High School, STEM strand</h3>
-                  <span class="timeline-date">2021 – 2023</span>
-                </div>
-                <p class="timeline-sub">Pampanga High School</p>
-                <ul class="timeline-details">
-                  <li>Writer for the school paper; placed 8th in Editorial Writing at a regional press conference (2021).</li>
-                </ul>
-              </div>
+              <p class="timeline-sub">Pampanga High School</p>
+              <ul class="timeline-details">
+                <li>Writer for the school paper; placed 8th in Editorial Writing at a regional press conference (2021).</li>
+              </ul>
             </article>
           </div>
         </div>
@@ -195,8 +192,7 @@
       <section id="skills" class="section" aria-labelledby="skills-title">
         <div class="container">
           <div class="section-heading">
-            <p class="eyebrow reveal">Skills</p>
-            <h2 class="section-title reveal" id="skills-title">What I work with</h2>
+            <h2 class="eyebrow reveal" id="skills-title">Skills</h2>
           </div>
 
           <div class="skill-grid">
@@ -266,8 +262,7 @@
       <section id="projects" class="section" aria-labelledby="projects-title">
         <div class="container">
           <div class="section-heading">
-            <p class="eyebrow reveal">Projects</p>
-            <h2 class="section-title reveal" id="projects-title">Things I've built</h2>
+            <h2 class="eyebrow reveal" id="projects-title">Projects</h2>
           </div>
 
           <div class="project-grid">
