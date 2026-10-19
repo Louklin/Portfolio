@@ -34,17 +34,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
 
-    <!-- Apply the saved theme before the page paints (dark by default) -->
-    <script>
-      (function () {
-        var t = "dark";
-        try {
-          if (localStorage.getItem("portfolio-theme") === "light") t = "light";
-        } catch (e) {}
-        document.documentElement.dataset.theme = t;
-        document.documentElement.classList.add("js");
-      })();
-    </script>
+    <script>document.documentElement.classList.add("js");</script>
 
     <link rel="stylesheet" href="css/style.css" />
     <script defer src="js/main.js"></script>
@@ -60,7 +50,6 @@
 
         <nav class="nav-links" aria-label="Primary">
           <ul>
-            <li><a href="#about" class="nav-link">About</a></li>
             <li><a href="#experience" class="nav-link">Experience</a></li>
             <li><a href="#skills" class="nav-link">Skills</a></li>
             <li><a href="#projects" class="nav-link">Projects</a></li>
@@ -69,9 +58,6 @@
         </nav>
 
         <div class="nav-actions">
-          <button type="button" class="icon-btn" id="themeToggle" aria-label="Switch to light theme">
-            <i class="fa-solid fa-sun" aria-hidden="true"></i>
-          </button>
           <button
             type="button"
             class="icon-btn nav-mobile-toggle"
@@ -87,7 +73,6 @@
 
       <div class="nav-mobile-menu" id="navMobileMenu">
         <ul>
-          <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#experience" class="nav-link">Experience</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
@@ -137,52 +122,6 @@
         </div>
       </section>
 
-      <!-- ============ ABOUT ============ -->
-      <section id="about" class="section" aria-labelledby="about-title">
-        <div class="container about-inner">
-          <div>
-            <p class="eyebrow reveal">About</p>
-            <h2 class="section-title reveal" id="about-title">
-              Data first, then the model, then the story.
-            </h2>
-            <div class="about-bio reveal">
-              <p>
-                I'm a BS Computer Science student at Angeles University Foundation in
-                Pampanga, graduating in 2027.
-              </p>
-              <p>
-                On our thesis team I was the data analyst. I collected, cleaned, and
-                prepared the SMS dataset that our transformer models learned from. We're now
-                turning that thesis into a research paper for the SOICT conference.
-              </p>
-              <p>
-                Before I wrote code, I wrote editorials. I still think the best technical
-                work is the kind you can explain to someone outside the field.
-              </p>
-            </div>
-          </div>
-
-          <div class="about-facts">
-            <div class="fact glass reveal">
-              <p class="fact-value gradient-text">2027</p>
-              <p class="fact-label">Expected graduation, BS Computer Science</p>
-            </div>
-            <div class="fact glass reveal">
-              <p class="fact-value gradient-text">mBERT</p>
-              <p class="fact-label">Best-performing model in our thesis</p>
-            </div>
-            <div class="fact glass reveal">
-              <p class="fact-value gradient-text">SOICT</p>
-              <p class="fact-label">Conference paper in preparation</p>
-            </div>
-            <div class="fact glass reveal">
-              <p class="fact-value gradient-text">8th</p>
-              <p class="fact-label">Editorial Writing, regional press conference</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- ============ EXPERIENCE & EDUCATION ============ -->
       <section id="experience" class="section" aria-labelledby="experience-title">
         <div class="container">
@@ -195,7 +134,6 @@
 
           <div class="timeline">
             <article class="timeline-entry reveal">
-              <span class="timeline-dot glass"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></span>
               <div class="timeline-card glass">
                 <div class="timeline-head">
                   <h3>A.S.E.A. Thesis Project</h3>
@@ -214,7 +152,6 @@
             </article>
 
             <article class="timeline-entry reveal">
-              <span class="timeline-dot glass"><i class="fa-solid fa-newspaper" aria-hidden="true"></i></span>
               <div class="timeline-card glass">
                 <div class="timeline-head">
                   <h3>Data Link</h3>
@@ -228,7 +165,6 @@
             </article>
 
             <article class="timeline-entry reveal">
-              <span class="timeline-dot glass"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></span>
               <div class="timeline-card glass">
                 <div class="timeline-head">
                   <h3>BS Computer Science</h3>
@@ -239,7 +175,6 @@
             </article>
 
             <article class="timeline-entry reveal">
-              <span class="timeline-dot glass"><i class="fa-solid fa-school" aria-hidden="true"></i></span>
               <div class="timeline-card glass">
                 <div class="timeline-head">
                   <h3>Senior High School, STEM strand</h3>
@@ -256,7 +191,7 @@
       </section>
 
       <!-- ============ SKILLS ============ -->
-      <!-- Edit these lists to match exactly what you've used. -->
+      <!-- Edit titles, descriptions, and tags to match your experience. -->
       <section id="skills" class="section" aria-labelledby="skills-title">
         <div class="container">
           <div class="section-heading">
@@ -268,31 +203,60 @@
             <div class="skill-group glass reveal">
               <div class="skill-head">
                 <span class="skill-icon"><i class="fa-solid fa-brain" aria-hidden="true"></i></span>
-                <h3>Machine learning &amp; NLP</h3>
+                <h3>Machine Learning &amp; NLP</h3>
               </div>
-              <div class="chips">
-                <span class="chip">BERT / mBERT</span><span class="chip">Tagalog-RoBERTa</span><span class="chip">Text classification</span><span class="chip">Class-weighted training</span>
-              </div>
+              <p class="skill-desc">Fine-tuning transformer models to classify text, from data preparation to comparing model results.</p>
+              <div class="chips"><span class="chip">BERT / mBERT</span><span class="chip">Tagalog-RoBERTa</span><span class="chip">Text classification</span></div>
             </div>
-
             <div class="skill-group glass reveal">
               <div class="skill-head">
                 <span class="skill-icon"><i class="fa-solid fa-table" aria-hidden="true"></i></span>
-                <h3>Data</h3>
+                <h3>Data Analysis</h3>
               </div>
-              <div class="chips">
-                <span class="chip">Python</span><span class="chip">Data cleaning</span><span class="chip">Preprocessing</span><span class="chip">Visualization</span>
-              </div>
+              <p class="skill-desc">Collecting, cleaning, and preprocessing datasets, then turning them into clear visualizations.</p>
+              <div class="chips"><span class="chip">Python</span><span class="chip">Data cleaning</span><span class="chip">Visualization</span></div>
             </div>
-
+            <div class="skill-group glass reveal">
+              <div class="skill-head">
+                <span class="skill-icon"><i class="fa-solid fa-server" aria-hidden="true"></i></span>
+                <h3>Back-end Web Development</h3>
+              </div>
+              <p class="skill-desc">Building the server side of web applications: application logic, APIs, and the databases behind them.</p>
+            </div>
+            <div class="skill-group glass reveal">
+              <div class="skill-head">
+                <span class="skill-icon"><i class="fa-solid fa-sitemap" aria-hidden="true"></i></span>
+                <h3>System Architecture Planning</h3>
+              </div>
+              <p class="skill-desc">Mapping out how a system's components, data, and services fit together before development starts.</p>
+            </div>
+            <div class="skill-group glass reveal">
+              <div class="skill-head">
+                <span class="skill-icon"><i class="fa-solid fa-pen-ruler" aria-hidden="true"></i></span>
+                <h3>UI/UX Planning</h3>
+              </div>
+              <p class="skill-desc">Planning screens and user flows so an application is easy to understand and navigate.</p>
+            </div>
+            <div class="skill-group glass reveal">
+              <div class="skill-head">
+                <span class="skill-icon"><i class="fa-solid fa-list-check" aria-hidden="true"></i></span>
+                <h3>Use Case Development</h3>
+              </div>
+              <p class="skill-desc">Defining who uses a system and what they need it to do, written as use cases that guide design and testing.</p>
+            </div>
+            <div class="skill-group glass reveal">
+              <div class="skill-head">
+                <span class="skill-icon"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i></span>
+                <h3>Prompt Engineering</h3>
+              </div>
+              <p class="skill-desc">Writing and structuring instructions for AI models and agents to get reliable, useful results.</p>
+            </div>
             <div class="skill-group glass reveal">
               <div class="skill-head">
                 <span class="skill-icon"><i class="fa-solid fa-pen-nib" aria-hidden="true"></i></span>
                 <h3>Writing</h3>
               </div>
-              <div class="chips">
-                <span class="chip">Editorials</span><span class="chip">Feature writing</span><span class="chip">Research papers</span>
-              </div>
+              <p class="skill-desc">Editorials, feature articles, and research papers that explain technical work clearly.</p>
             </div>
           </div>
         </div>

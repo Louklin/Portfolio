@@ -1,25 +1,6 @@
-// Small, dependency-free script: theme toggle, mobile menu, nav background, scroll reveal.
+// Small, dependency-free script: mobile menu, nav background, scroll reveal.
 
 (function () {
-  var root = document.documentElement;
-
-  // ----- Theme toggle (dark / light), remembered in this browser -----
-  var themeBtn = document.getElementById("themeToggle");
-
-  function setTheme(theme) {
-    root.dataset.theme = theme;
-    try { localStorage.setItem("portfolio-theme", theme); } catch (e) {}
-    var next = theme === "dark" ? "light" : "dark";
-    themeBtn.setAttribute("aria-label", "Switch to " + next + " theme");
-    themeBtn.innerHTML =
-      '<i class="fa-solid fa-' + (theme === "dark" ? "sun" : "moon") + '" aria-hidden="true"></i>';
-  }
-
-  setTheme(root.dataset.theme || "dark");
-  themeBtn.addEventListener("click", function () {
-    setTheme(root.dataset.theme === "dark" ? "light" : "dark");
-  });
-
   // ----- Mobile menu -----
   var nav = document.getElementById("siteNav");
   var navBtn = document.getElementById("navToggle");
