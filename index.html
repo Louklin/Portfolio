@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Felice Louise Vicencio | Computer Science Student</title>
+    <meta
+      name="description"
+      content="Felice Louise D. Vicencio, Computer Science student at Angeles University Foundation working on NLP, data analysis, and writing."
+    />
+    <meta name="author" content="Felice Louise D. Vicencio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Felice Louise Vicencio" />
+    <meta
+      property="og:description"
+      content="CS student building language models that catch SMS scams, and writing about it."
+    />
+    <!-- TODO: after publishing, set this to your live URL, e.g. https://louklin.github.io/ -->
+    <meta property="og:url" content="https://louklin.github.io/" />
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%234f8cff'/><stop offset='1' stop-color='%237b61ff'/></linearGradient></defs><rect width='64' height='64' rx='16' fill='url(%23g)'/><text x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='700' font-size='30' fill='white'>F</text></svg>"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Apply the saved theme before the page paints (dark by default) -->
+    <script>
+      (function () {
+        var t = "dark";
+        try {
+          if (localStorage.getItem("portfolio-theme") === "light") t = "light";
+        } catch (e) {}
+        document.documentElement.dataset.theme = t;
+        document.documentElement.classList.add("js");
+      })();
+    </script>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/main.js"></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <!-- ============ NAV ============ -->
+    <header class="site-nav" id="siteNav">
+      <div class="container nav-inner">
+        <a href="#hero" class="nav-logo">Felice<span class="gradient-text">.</span></a>
+
+        <nav class="nav-links" aria-label="Primary">
+          <ul>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <button type="button" class="icon-btn" id="themeToggle" aria-label="Switch to light theme">
+            <i class="fa-solid fa-sun" aria-hidden="true"></i>
+          </button>
+          <button
+            type="button"
+            class="icon-btn nav-mobile-toggle"
+            id="navToggle"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="navMobileMenu"
+          >
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="nav-mobile-menu" id="navMobileMenu">
+        <ul>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- ============ HERO ============ -->
+      <section id="hero" aria-label="Introduction">
+        <div class="hero-bg" aria-hidden="true"></div>
+
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="hero-status reveal">
+              <span class="status-dot"></span>
+              Open to internships
+            </p>
+            <h1 class="hero-title reveal">Felice Louise Vicencio</h1>
+            <p class="hero-role gradient-text reveal">Computer Science Student</p>
+            <p class="hero-description reveal">
+              I work where data, natural language, and clear writing meet. Most recently,
+              I helped build a BERT-based system that flags spam and phishing text messages
+              for the PNP's Regional Anti-Cybercrime Unit 3.
+            </p>
+            <div class="hero-cta reveal">
+              <a class="btn btn-primary" href="#projects">View my work</a>
+              <a class="btn btn-secondary" href="#contact">Get in touch</a>
+              <!-- When your CV is ready, put it at assets/resume.pdf and uncomment:
+              <a class="btn btn-ghost" href="assets/resume.pdf" target="_blank" rel="noopener">
+                <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Resume
+              </a> -->
+            </div>
+          </div>
+
+          <div class="hero-visual reveal" aria-hidden="true">
+            <div class="orbit">
+              <div class="orbit-core glass"><i class="fa-solid fa-message"></i></div>
+              <span class="orbit-badge glass b1"><i class="fa-solid fa-brain"></i>BERT</span>
+              <span class="orbit-badge glass b2"><i class="fa-brands fa-python"></i>Python</span>
+              <span class="orbit-badge glass b3"><i class="fa-solid fa-broom"></i>Data cleaning</span>
+              <span class="orbit-badge glass b4"><i class="fa-solid fa-chart-column"></i>Visualization</span>
+              <span class="orbit-badge glass b5"><i class="fa-solid fa-pen-nib"></i>Writing</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ABOUT ============ -->
+      <section id="about" class="section" aria-labelledby="about-title">
+        <div class="container about-inner">
+          <div>
+            <p class="eyebrow reveal">About</p>
+            <h2 class="section-title reveal" id="about-title">
+              Data first, then the model, then the story.
+            </h2>
+            <div class="about-bio reveal">
+              <p>
+                I'm a BS Computer Science student at Angeles University Foundation in
+                Pampanga, graduating in 2027.
+              </p>
+              <p>
+                On our thesis team I was the data analyst. I collected, cleaned, and
+                prepared the SMS dataset that our transformer models learned from. We're now
+                turning that thesis into a research paper for the SOICT conference.
+              </p>
+              <p>
+                Before I wrote code, I wrote editorials. I still think the best technical
+                work is the kind you can explain to someone outside the field.
+              </p>
+            </div>
+          </div>
+
+          <div class="about-facts">
+            <div class="fact glass reveal">
+              <p class="fact-value gradient-text">2027</p>
+              <p class="fact-label">Expected graduation, BS Computer Science</p>
+            </div>
+            <div class="fact glass reveal">
+              <p class="fact-value gradient-text">mBERT</p>
+              <p class="fact-label">Best-performing model in our thesis</p>
+            </div>
+            <div class="fact glass reveal">
+              <p class="fact-value gradient-text">SOICT</p>
+              <p class="fact-label">Conference paper in preparation</p>
+            </div>
+            <div class="fact glass reveal">
+              <p class="fact-value gradient-text">8th</p>
+              <p class="fact-label">Editorial Writing, regional press conference</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ EXPERIENCE & EDUCATION ============ -->
+      <section id="experience" class="section" aria-labelledby="experience-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow reveal">Experience</p>
+            <h2 class="section-title reveal" id="experience-title">
+              Research, writing, and school
+            </h2>
+          </div>
+
+          <div class="timeline">
+            <article class="timeline-entry reveal">
+              <span class="timeline-dot glass"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></span>
+              <div class="timeline-card glass">
+                <div class="timeline-head">
+                  <h3>A.S.E.A. Thesis Project</h3>
+                  <span class="timeline-date">2025 – 2026</span>
+                </div>
+                <p class="timeline-sub">Data Analyst</p>
+                <ul class="timeline-details">
+                  <li>Collected, cleaned, and preprocessed the SMS dataset for a BERT-based spam and phishing detector built for PNP Regional Anti-Cybercrime Unit 3.</li>
+                  <li>Worked on a revised training setup with class-weighted loss for imbalanced labels; compared multilingual and Filipino-specific models, with mBERT performing best.</li>
+                  <li>Co-writing a paper from the thesis for submission to the SOICT conference.</li>
+                </ul>
+                <div class="chips">
+                  <span class="chip">mBERT</span><span class="chip">Tagalog-RoBERTa</span><span class="chip">NLP</span><span class="chip">Data preprocessing</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="timeline-entry reveal">
+              <span class="timeline-dot glass"><i class="fa-solid fa-newspaper" aria-hidden="true"></i></span>
+              <div class="timeline-card glass">
+                <div class="timeline-head">
+                  <h3>Data Link</h3>
+                  <!-- TODO: add the years you wrote for Data Link -->
+                </div>
+                <p class="timeline-sub">Writer, AUF's school paper</p>
+                <ul class="timeline-details">
+                  <li>Wrote editorials and feature articles for the university publication.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="timeline-entry reveal">
+              <span class="timeline-dot glass"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></span>
+              <div class="timeline-card glass">
+                <div class="timeline-head">
+                  <h3>BS Computer Science</h3>
+                  <span class="timeline-date">Expected 2027</span>
+                </div>
+                <p class="timeline-sub">Angeles University Foundation</p>
+              </div>
+            </article>
+
+            <article class="timeline-entry reveal">
+              <span class="timeline-dot glass"><i class="fa-solid fa-school" aria-hidden="true"></i></span>
+              <div class="timeline-card glass">
+                <div class="timeline-head">
+                  <h3>Senior High School, STEM strand</h3>
+                  <span class="timeline-date">2021 – 2023</span>
+                </div>
+                <p class="timeline-sub">Pampanga High School</p>
+                <ul class="timeline-details">
+                  <li>Writer for the school paper; placed 8th in Editorial Writing at a regional press conference (2021).</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SKILLS ============ -->
+      <!-- Edit these lists to match exactly what you've used. -->
+      <section id="skills" class="section" aria-labelledby="skills-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow reveal">Skills</p>
+            <h2 class="section-title reveal" id="skills-title">What I work with</h2>
+          </div>
+
+          <div class="skill-grid">
+            <div class="skill-group glass reveal">
+              <div class="skill-head">
+                <span class="skill-icon"><i class="fa-solid fa-brain" aria-hidden="true"></i></span>
+                <h3>Machine learning &amp; NLP</h3>
+              </div>
+              <div class="chips">
+                <span class="chip">BERT / mBERT</span><span class="chip">Tagalog-RoBERTa</span><span class="chip">Text classification</span><span class="chip">Class-weighted training</span>
+              </div>
+            </div>
+
+            <div class="skill-group glass reveal">
+              <div class="skill-head">
+                <span class="skill-icon"><i class="fa-solid fa-table" aria-hidden="true"></i></span>
+                <h3>Data</h3>
+              </div>
+              <div class="chips">
+                <span class="chip">Python</span><span class="chip">Data cleaning</span><span class="chip">Preprocessing</span><span class="chip">Visualization</span>
+              </div>
+            </div>
+
+            <div class="skill-group glass reveal">
+              <div class="skill-head">
+                <span class="skill-icon"><i class="fa-solid fa-pen-nib" aria-hidden="true"></i></span>
+                <h3>Writing</h3>
+              </div>
+              <div class="chips">
+                <span class="chip">Editorials</span><span class="chip">Feature writing</span><span class="chip">Research papers</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PROJECTS ============ -->
+      <section id="projects" class="section" aria-labelledby="projects-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow reveal">Projects</p>
+            <h2 class="section-title reveal" id="projects-title">Things I've built</h2>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card glass reveal">
+              <div class="project-head">
+                <span class="project-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></span>
+                <h3>A.S.E.A.</h3>
+              </div>
+              <p>
+                A BERT-based web application that classifies SMS messages as legitimate,
+                spam, or phishing, built as our thesis for PNP Regional Anti-Cybercrime Unit 3.
+              </p>
+              <div class="chips"><span class="chip">NLP</span><span class="chip">mBERT</span><span class="chip">Web app</span></div>
+              <!-- TODO: add links, e.g.
+              <div class="project-links"><a class="btn btn-secondary btn-sm" href="https://github.com/Louklin/REPO" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Source</a></div> -->
+            </article>
+
+            <article class="project-card glass reveal">
+              <div class="project-head">
+                <span class="project-icon"><i class="fa-solid fa-chart-column" aria-hidden="true"></i></span>
+                <h3>PH Social Issue Data Study</h3>
+              </div>
+              <p>
+                A group project: we picked a current social issue in the Philippines, found
+                public datasets, cleaned them, and built visualizations that make the problem
+                readable at a glance.
+              </p>
+              <div class="chips"><span class="chip">Data cleaning</span><span class="chip">Visualization</span></div>
+            </article>
+
+            <article class="project-card glass reveal">
+              <div class="project-head">
+                <span class="project-icon"><i class="fa-solid fa-id-card" aria-hidden="true"></i></span>
+                <h3>HR Agent Skill</h3>
+              </div>
+              <p>
+                A modular skill that lets an AI agent handle HR paperwork. A main instruction
+                file routes requests to components such as Certificate of Employment
+                generation and employee records.
+              </p>
+              <div class="chips"><span class="chip">AI agents</span><span class="chip">Automation</span></div>
+            </article>
+
+            <article class="project-card glass reveal">
+              <div class="project-head">
+                <span class="project-icon"><i class="fa-solid fa-ship" aria-hidden="true"></i></span>
+                <h3>Naval Combat Game <span class="badge">In planning</span></h3>
+              </div>
+              <p>
+                A top-down naval combat simulator with ship classes and target-tracking fire
+                control. It starts with one ship and grows into fleet command, using simple
+                graphics so the focus stays on the mechanics.
+              </p>
+              <div class="chips"><span class="chip">Game design</span><span class="chip">Simulation</span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CONTACT ============ -->
+      <section id="contact" class="section" aria-labelledby="contact-title">
+        <div class="container contact-inner">
+          <div>
+            <p class="eyebrow reveal">Contact</p>
+            <h2 class="section-title reveal" id="contact-title">Let's talk.</h2>
+            <p class="section-sub reveal">
+              I'm looking for an internship where I can work with data and language models.
+              If you have a role or a project in mind, reach out.
+            </p>
+          </div>
+
+          <ul class="contact-list reveal">
+            <li>
+              <!-- TODO: replace with your real email (both places on this line) -->
+              <a class="contact-link glass" href="mailto:your.email@example.com">
+                <span class="contact-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
+                <span>your.email@example.com</span>
+              </a>
+            </li>
+            <li>
+              <a class="contact-link glass" href="https://github.com/Louklin" target="_blank" rel="noopener">
+                <span class="contact-icon"><i class="fa-brands fa-github" aria-hidden="true"></i></span>
+                <span>github.com/Louklin</span>
+              </a>
+            </li>
+            <li>
+              <!-- TODO: replace with your LinkedIn URL -->
+              <a class="contact-link glass" href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">
+                <span class="contact-icon"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></span>
+                <span>LinkedIn</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="nav-logo">Felice<span class="gradient-text">.</span></p>
+        <p class="footer-note">© <span id="year">2026</span> Felice Louise D. Vicencio</p>
+      </div>
+    </footer>
+  </body>
+</html>
