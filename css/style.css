@@ -446,6 +446,18 @@ img.img-slot { border: 1px solid var(--border); background: none; }
   margin-bottom: 6px;
 }
 .project-columns p { color: var(--text-2); font-size: 0.97rem; }
+.feature-list { display: grid; gap: 6px; }
+.feature-list li { position: relative; padding-left: 18px; color: var(--text-2); font-size: 0.97rem; }
+.feature-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 6px;
+  height: 6px;
+  border-radius: 2px;
+  background: var(--gradient);
+}
 .project-links { display: flex; gap: 10px; margin-top: 18px; }
 
 @media (max-width: 800px) {

@@ -265,46 +265,44 @@
                 <span class="timeline-date">2025 – 2026 · Undergraduate thesis</span>
               </div>
               <p class="project-tagline">
-                A BERT-based web application for spam and phishing SMS detection, built for the
-                PNP Regional Anti-Cybercrime Unit 3.
+                A web app that checks whether a text message is legitimate, spam, or phishing.
               </p>
 
               <div class="project-columns">
                 <div>
                   <h4>The problem</h4>
                   <p>
-                    Scam and phishing text messages in the Philippines are written in English,
-                    Filipino, and a mix of both, which makes them hard to filter with simple rules.
+                    Scam and phishing texts are a common way to steal money and personal
+                    information in the Philippines. They're written in English, Filipino, or a mix
+                    of both, so simple keyword filters miss many of them.
                   </p>
                 </div>
                 <div>
-                  <h4>What we built</h4>
+                  <h4>Features</h4>
+                  <!-- Edit this list to match the app's actual screens and features. -->
+                  <ul class="feature-list">
+                    <li>Paste or type a text message to check it</li>
+                    <li>Labels each message as legitimate, spam, or phishing</li>
+                    <li>Understands English, Filipino, and Taglish messages</li>
+                    <li>Built for the PNP Regional Anti-Cybercrime Unit 3</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>How it works</h4>
                   <p>
-                    A web application that classifies a text message as legitimate, spam, or
-                    phishing using fine-tuned transformer models. We compared multilingual and
-                    Filipino-specific models, trained with class-weighted loss for imbalanced
-                    data; mBERT performed best.
+                    The app runs a fine-tuned BERT language model. We compared several models,
+                    and multilingual BERT (mBERT) gave the best results.
                   </p>
                 </div>
                 <div>
                   <h4>My role</h4>
                   <p>
-                    Data Analyst. I handled data collection, cleaning, and preprocessing of the
-                    SMS dataset used for model training.
-                  </p>
-                </div>
-                <div>
-                  <h4>Outcome</h4>
-                  <p>
-                    Completed as our undergraduate thesis. A research paper based on the project
-                    is being prepared for the SOICT conference.
+                    Data Analyst. I collected, cleaned, and prepared the text message dataset
+                    the model was trained on.
                   </p>
                 </div>
               </div>
 
-              <div class="chips">
-                <span class="chip">mBERT</span><span class="chip">Tagalog-RoBERTa</span><span class="chip">NLP</span><span class="chip">Python</span><span class="chip">Google Colab</span><span class="chip">Web application</span>
-              </div>
               <!-- Optional links, e.g.:
               <div class="project-links">
                 <a class="btn btn-secondary btn-sm" href="https://github.com/Louklin/REPO" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Source</a>
