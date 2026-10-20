@@ -17,7 +17,7 @@ assets/        put resume.pdf and images here
 
 Search `index.html` for `TODO` and fill in:
 
-1. Project links (GitHub repos or demos), if you have them
+1. Project images: save them in `assets/projects/asea/` and replace the placeholders (see the comment in the Projects section of `index.html`)
 2. Your CV: save it as `assets/resume.pdf`, then uncomment the Resume button in the hero
 
 ## Publish on GitHub Pages

@@ -145,13 +145,11 @@ h2.eyebrow { font-size: 0.95rem; margin-bottom: 0; }
 /* Cards that lift slightly on hover */
 .timeline-card,
 .skill-group,
-.project-card,
 .contact-link {
   transition: transform 0.3s var(--ease), border-color 0.3s var(--ease), background 0.3s var(--ease);
 }
 .timeline-card:hover,
 .skill-group:hover,
-.project-card:hover,
 .contact-link:hover {
   transform: translateY(-3px);
   border-color: var(--border-strong);
@@ -396,21 +394,67 @@ h2.eyebrow { font-size: 0.95rem; margin-bottom: 0; }
   color: #fff;
 }
 
-/* Projects */
-.project-grid {
+/* Projects: one large feature block per project */
+.project-feature { padding: 28px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px; }
+.project-feature + .project-feature { margin-top: 28px; }
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 14px;
+  height: 420px;
+}
+.img-slot {
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  object-fit: cover;
+  background: linear-gradient(160deg, #f1f7fe, #e2eefb);
+  border: 2px dashed var(--border-strong);
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 8px;
+  color: var(--accent-3);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+img.img-slot { border: 1px solid var(--border); background: none; }
+.img-slot i { font-size: 2rem; color: var(--accent-2); }
+.img-main { grid-row: span 2; }
+
+.project-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.project-title-row h3 { font-size: clamp(1.8rem, 1.5rem + 1vw, 2.4rem); letter-spacing: -0.02em; }
+.project-tagline { margin-top: 10px; font-size: 1.15rem; color: var(--text); max-width: 40em; }
+.project-columns {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 24px 40px;
+  margin-top: 28px;
 }
-@media (max-width: 700px) {
-  .project-grid { grid-template-columns: 1fr; }
+.project-columns h4 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--accent);
+  margin-bottom: 6px;
 }
-.project-card { padding: 28px; display: flex; flex-direction: column; }
-.project-head { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
-.project-head h3 { font-size: 1.2rem; }
-.project-card p { color: var(--text-2); font-size: 0.97rem; }
-.project-card .chips { margin-top: auto; padding-top: 18px; }
+.project-columns p { color: var(--text-2); font-size: 0.97rem; }
 .project-links { display: flex; gap: 10px; margin-top: 18px; }
+
+@media (max-width: 800px) {
+  .project-feature { padding: 20px; gap: 24px; }
+  .project-gallery { height: auto; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: auto; }
+  .img-main { grid-column: span 2; grid-row: auto; aspect-ratio: 16 / 10; }
+  .img-slot:not(.img-main) { aspect-ratio: 4 / 3; }
+  .project-columns { grid-template-columns: 1fr; gap: 18px; }
+}
 
 /* Contact */
 .contact-inner {
@@ -470,8 +514,7 @@ h2.eyebrow { font-size: 0.95rem; margin-bottom: 0; }
 @media (max-width: 600px) {
   .section { padding-block: 44px; }
   .timeline-card,
-  .skill-group,
-  .project-card { padding: 22px; }
+  .skill-group { padding: 22px; }
 }
 
 /* Respect "reduce motion" settings */
