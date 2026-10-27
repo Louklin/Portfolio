@@ -9,7 +9,7 @@ Design adapted from [vinaysomawat.github.io](https://github.com/vinaysomawat/vin
 ```
 index.html     all the page content (edit text here)
 css/style.css  colors, fonts, layout (theme colors are at the top)
-js/main.js     mobile menu, fade-in on scroll
+js/main.js     mobile menu, fade-in on scroll, hero parallax
 assets/        put resume.pdf and images here
 ```
 

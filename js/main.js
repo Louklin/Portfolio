@@ -1,4 +1,4 @@
-// Small, dependency-free script: mobile menu, nav background, scroll reveal.
+// Small, dependency-free script: mobile menu, nav background, scroll reveal, hero parallax.
 
 (function () {
   // ----- Mobile menu -----
@@ -44,6 +44,37 @@
       { threshold: 0.12 }
     );
     items.forEach(function (el) { observer.observe(el); });
+  }
+
+  // ----- Parallax: while scrolling through the hero, each layer moves at its own speed -----
+  // Uses the `translate` property so it doesn't fight the entrance animations on `transform`.
+  var hero = document.getElementById("hero");
+  var layers = [
+    [document.querySelector(".hero-bg"), 0.5],
+    [document.querySelector(".hero-inner"), 0.25],
+    // Disc and bar share a speed so the bar stays centered on the disc
+    [document.querySelector(".deco-disc"), 0.35],
+    [document.querySelector(".deco-bar"), 0.35]
+  ];
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var ticking = false;
+
+  function parallax() {
+    var y = Math.min(window.scrollY, hero.offsetHeight);
+    layers.forEach(function (layer) {
+      layer[0].style.translate = "0 " + (y * layer[1]).toFixed(1) + "px";
+    });
+    ticking = false;
+  }
+
+  if (!reduceMotion) {
+    parallax();
+    window.addEventListener("scroll", function () {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(parallax);
+      }
+    }, { passive: true });
   }
 
   // ----- Footer year -----

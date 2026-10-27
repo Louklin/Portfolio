@@ -19,7 +19,7 @@
 
     <link
       rel="icon"
-      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%234f8cff'/><stop offset='1' stop-color='%237b61ff'/></linearGradient></defs><rect width='64' height='64' rx='16' fill='url(%23g)'/><text x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='700' font-size='30' fill='white'>F</text></svg>"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%23e9ddd0'/><rect x='36' y='4' width='5' height='56' fill='%23e0432a' transform='rotate(-20 38 32)'/><circle cx='30' cy='28' r='17' fill='%23141414'/></svg>"
     />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -41,6 +41,13 @@
 
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <!-- Constructivist backdrop: red rail, grey bar, black disc -->
+    <div class="deco" aria-hidden="true">
+      <div class="deco-rail"></div>
+      <div class="deco-bar"></div>
+      <div class="deco-disc"></div>
+    </div>
 
     <!-- ============ NAV ============ -->
     <header class="site-nav" id="siteNav">
@@ -86,11 +93,10 @@
       <!-- ============ HERO ============ -->
       <section id="hero" aria-label="Introduction">
         <div class="hero-bg" aria-hidden="true"></div>
-
         <div class="container hero-inner">
           <div class="hero-copy">
             <h1 class="hero-title reveal">Felice Louise Vicencio</h1>
-            <p class="hero-role gradient-text reveal">Software Engineer · Web Development · Applied AI</p>
+            <p class="hero-role gradient-text reveal">Software&nbsp;Engineer · Web&nbsp;Development · Applied&nbsp;AI</p>
             <p class="hero-description reveal">
               Hello and welcome to my portfolio. I'm a software engineer with experience in
               developing web apps, software, data analytics, and AI systems. I aim to keep
